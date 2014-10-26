@@ -20,6 +20,73 @@
             function stage_controler(){
                 if (now_stage==1){now_stage=2;}
                 else {now_stage=1;}
+                for (var i=0;i<9;i++){
+                    if(stage_array[i]==1||stage_array[i]==2){
+                        if(stage_array[0]==stage_array[1]& stage_array[1]==stage_array[2]&stage_array[0]!=0){                            
+                            c.strokeStyle="#FF0000";
+                            c.strokeRect( canvas.width/12, canvas.height/12, canvas.width*5/6, canvas.height/6 );
+                            game_end();
+                            
+                        }
+                        if(stage_array[0]==stage_array[4]& stage_array[8]==stage_array[4]&stage_array[0]!=0){                            
+                            c.beginPath();
+                            c.strokeStyle="#FF0000";
+                            c.lineCap = "round";
+                            c.lineWidth = 20;
+                            c.moveTo(canvas.width/6,canvas.height/6);
+                            c.lineTo(canvas.width/6*5,canvas.height/6*5);
+                            c.stroke();                            
+                            game_end();
+                        }
+                        if(stage_array[0]==stage_array[3]& stage_array[3]==stage_array[6]&stage_array[0]!=0){
+                            c.strokeStyle="#FF0000";
+                            c.strokeRect( canvas.width/12, canvas.height/12, canvas.width/6, canvas.height/6*5 );                          
+                            game_end();
+                        }
+                        if(stage_array[1]==stage_array[4]& stage_array[4]==stage_array[7]&stage_array[1]!=0){
+                            c.strokeStyle="#FF0000";
+                            c.strokeRect( canvas.width/12*5, canvas.height/12, canvas.width/6, canvas.height/6*5 );                          
+                            game_end();   
+                        }
+                        if(stage_array[2]==stage_array[5]& stage_array[5]==stage_array[8]&stage_array[2]!=0){
+                            c.strokeStyle="#FF0000";
+                            c.strokeRect( canvas.width/4*3, canvas.height/12, canvas.width/6, canvas.height/6*5 );                          
+                            game_end();
+                            
+                        }
+                        if(stage_array[3]==stage_array[4]& stage_array[5]==stage_array[4]&stage_array[3]!=0){
+                            c.strokeStyle="#FF0000";
+                            c.strokeRect( canvas.width/12, canvas.height/12*5, canvas.width*5/6, canvas.height/6 );
+                            game_end();
+                            
+                        }
+                        if(stage_array[6]==stage_array[7]& stage_array[8]==stage_array[7]&stage_array[6]!=0){
+                            c.strokeStyle="#FF0000";
+                            c.strokeRect( canvas.width/12, canvas.height/4*3, canvas.width*5/6, canvas.height/6 );
+                            game_end();
+                        }
+                        if(stage_array[2]==stage_array[4]& stage_array[6]==stage_array[4]&stage_array[2]!=0){
+                            c.beginPath();
+                            c.strokeStyle="#FF0000";
+                            c.lineCap = "round";
+                            c.lineWidth = 20;
+                            c.moveTo(canvas.width/6*5,canvas.height/6);
+                            c.lineTo(canvas.width/6,canvas.height/6*5);
+                            c.stroke();                            
+                            game_end();                            
+                        }
+                    }
+                }
+                
+            }
+            function restart(){
+                canvas.removeEventListener("click",restart,false);
+                draw();
+            }
+            function game_end(){
+                canvas.removeEventListener("mousemove",domousover,false);
+                canvas.removeEventListener("click",mous_click,false);
+                canvas.addEventListener("click",restart,false);
                 
             }
             function draw_stage(){
@@ -113,6 +180,7 @@
                     c.moveTo( canvas.width/4, canvas.height/12);
                     c.lineTo( canvas.width/12,canvas.height/4);
                     c.lineWidth = 10;
+                    c.lineCap = "round";
                     c.stroke();
                 }
                 if(status==2){
