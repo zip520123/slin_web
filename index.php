@@ -15,6 +15,7 @@
                     stage_array[i]=0;   
                 }
                 now_stage=1;
+                control_stage=0;
                 stage_controler();
             }
             function stage_controler(){
@@ -77,6 +78,8 @@
                         }
                     }
                 }
+                control_stage++;
+                if(control_stage==10)game_end();
                 
             }
             function restart(){
@@ -217,8 +220,7 @@
                     if(stage_array[0]==0){
                         stage_array[0]=now_stage;
                     }
-                    c.fillRect(0,0,canvas.width/3,canvas.height/3);    
-                    draw_X();
+                   
                 };
                 //1
                 if (e.pageX>canvas.width/3&e.pageX<canvas.width/3*2 &e.pageY<canvas.height/3){
@@ -369,7 +371,8 @@
                 gradient.addColorStop("0.5", "blue");
                 gradient.addColorStop("1.0", "red");
                 c.fillStyle=gradient;
-                draw_grid();                           
+                draw_grid();
+                draw_stage();
             }
             
 
