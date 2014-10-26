@@ -14,14 +14,14 @@
                 var c=canvas.getContext('2d');
                 canvas.width  = window.innerWidth;
                 canvas.height = window.innerHeight;
+                
         canvas.addEventListener("mousemove",domousover,false);
         canvas.addEventListener("click",mous_click,false);
   }
         function mous_click(e){
              var canvas=document.getElementById('canvas1');
                 var c=canvas.getContext('2d');
-                //c.clearRect(0,0,canvas.width,canvas.height);
-                
+                              
                 c.fillRect(e.pageX, e.pageY, 50, 30);
         }
         function domousover(e){
