@@ -78,7 +78,7 @@
                         }
                     }
                 }
-                control_stage++;
+                
                 if(control_stage==10)game_end();
                 
             }
@@ -219,6 +219,7 @@
                 if (e.pageX<canvas.width/3 &e.pageY<canvas.height/3){
                     if(stage_array[0]==0){
                         stage_array[0]=now_stage;
+                        control_stage++;
                     }
                    
                 };
@@ -226,36 +227,42 @@
                 if (e.pageX>canvas.width/3&e.pageX<canvas.width/3*2 &e.pageY<canvas.height/3){
                     if(stage_array[1]==0){
                         stage_array[1]=now_stage;
+                        control_stage++;
                     }
                 }
                 //2
                 if (e.pageX>canvas.width/3*2&e.pageY<canvas.height/3){
                     if(stage_array[2]==0){
                         stage_array[2]=now_stage;
+                        control_stage++;
                     }
                 }
                 //3
                 if (e.pageX<canvas.width/3 &e.pageY>canvas.height/3 &e.pageY<canvas.height/3*2 ){
                     if(stage_array[3]==0){
                         stage_array[3]=now_stage;
+                        control_stage++;
                     } 
                 }
                 //4
                 if (e.pageX>canvas.width/3&e.pageX<canvas.width/3*2 &e.pageY>canvas.height/3&e.pageY<canvas.height/3*2){
                     if(stage_array[4]==0){
                         stage_array[4]=now_stage;
+                        control_stage++;
                     }
                 }
                 //5
                 if (e.pageX>canvas.width/3*2&e.pageY>canvas.height/3&e.pageY<canvas.height/3*2){
                     if(stage_array[5]==0){
                         stage_array[5]=now_stage;
+                        control_stage++;
                     }
                 }
                 //6
                 if (e.pageX<canvas.width/3 &e.pageY>canvas.height/3*2){
                     if(stage_array[6]==0){
                         stage_array[6]=now_stage;
+                        control_stage++;
                     }
                     
                 }
@@ -263,6 +270,7 @@
                 if (e.pageX>canvas.width/3&e.pageX<canvas.width/3*2 &e.pageY>canvas.height/3*2){
                     if(stage_array[7]==0){
                         stage_array[7]=now_stage;
+                        control_stage++;
                     }
                 }
                 //8
@@ -270,6 +278,7 @@
                     
                     if(stage_array[8]==0){
                         stage_array[8]=now_stage;
+                        control_stage++;
                     }
                 }
                 draw_stage();
