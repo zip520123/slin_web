@@ -1,0 +1,39 @@
+/* 
+    Document   : hplphp_css
+    Created on : 2014/5/30, 下午 08:03:31
+    Author     : zip520123
+    Description:
+        Purpose of the stylesheet follows.
+@import url("hplphp_css.css");
+*/
+
+/*forcing the body to take 100% height*/
+html, body {min-height: 100%;}
+body {
+    background: #544; /*fallback*/
+    background: linear-gradient(#5ff, #565);
+}
+
+form{
+    text-align: center;
+    
+}
+a span{
+    color:blue; 
+    position:inherit ; top: 100%; left: 0; width: 100%;
+    text-align: center;
+}
+table {
+    width:700px;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left:auto; 
+    margin-right:auto;
+    
+    
+    
+}
+
+table, td, th {
+    border: 1px solid black;
+}
