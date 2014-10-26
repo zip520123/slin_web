@@ -79,7 +79,7 @@
                     }
                 }
                 
-                if(control_stage==10)game_end();
+                if(control_stage==9)game_end();
                 
             }
             function restart(){
