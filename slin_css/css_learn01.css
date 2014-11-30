@@ -1,0 +1,30 @@
+.bs-docs-header{background-image: linear-gradient(to bottom,#df3273 10,#701E6B 100%);
+                color: #cdbfe3;
+background-color: #6f5499;
+}
+.bs-docs-header{	
+	
+	padding-top: 60px;
+	padding-bottom: 60px;
+	font-size: 24px;
+	text-align: left;
+}
+.jumbotron h1{
+	text-align: center;	
+}
+.bs-docs-header h1{
+    color:#fff;
+    font-size: 60px;
+
+}
+.bs-docs-sidebar .nav>li>a{
+	color: #999;
+	padding: 4px 20px;
+
+}
+.collapse .nav>li>a{
+    color: #999;
+    
+    
+}
+.starter-template{padding-top: 100px;}
